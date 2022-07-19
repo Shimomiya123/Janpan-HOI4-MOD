@@ -1,0 +1,49 @@
+focus_tree = {
+	id = japan_wtt_focus
+	
+	country = {
+	    factor = 
+		modifier = {
+		    tag = JAP
+			add = 1
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 20 y = 1200 }
+	
+	focus = {
+	    id = TEST_1
+		icon = FX_goal_support_communism
+	}
+	
+	x = 3
+	y = 0
+	cost = 10
+	ai_will_do = {
+	    factor = 2
+	}
+	
+	available = {
+	
+	}
+	
+	allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+		
+	bypass = {
+	    has_governement = neutrality
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+	    add_political_power = 200
+		
+	}
+}
