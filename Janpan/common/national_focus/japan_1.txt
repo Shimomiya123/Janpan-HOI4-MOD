@@ -5586,6 +5586,7 @@
 		
 		x = -5
 	    y = 0
+		
 	    cost = 20
 	    ai_will_do = {
 	        factor = 2
@@ -5609,45 +5610,11 @@
 	
 	    search_filters = { FOCUS_FILTER_POLITICAL }
 	    completion_reward = {
-		    add_ideas = GER_revive_the_kaiserreich #replace later with own idea
+		    add_ideas = test_idea_imperial_revival #replace later with own idea
 			add_political_power = 200
 		
 	    }
 	}
-		
-	focus = {
-	    id = TEST_2
-		icon = GFX_goal_demand_sudetenland
-		mutually_exclusive = {
-		}
-		
-		x = -5
-	    y = 2
-	    cost = 20
-	    ai_will_do = {
-	        factor = 2
-	    } 
-		
-		prerequisite = { focus = TEST_1 }
-	
-	    available = {
-	
-	    }
-	
-	    allow_branch = {
-			has_dlc = "Waking the Tiger"
-		}
-		
-	
-	    cancel_if_invalid = yes
-	    continue_if_invalid = no
-	    available_if_capitulated = no
-	
-	    search_filters = { FOCUS_FILTER_POLITICAL }
-	    completion_reward = {
-		    add_ideas = JAP_clamp_down_on_fascism #replace later wit own idea + daily unaligned support
-	    }
-	}
 	
 	focus = {
 	    id = TEST_2
@@ -5675,6 +5642,7 @@
 	    bypass = {
 	        has_governement = neutrality
 	    }
+		
 	
 	    cancel_if_invalid = yes
 	    continue_if_invalid = no
@@ -5682,7 +5650,13 @@
 	
 	    search_filters = { FOCUS_FILTER_POLITICAL }
 	    completion_reward = {
-		    add_ideas = JAP_clamp_down_on_fascism #replace later wit own idea + daily unaligned support
+		
+		    add_idea = test_idea_kill_fascism
+			
+			add_popularity = {
+                ideology = neutrality
+                popularity = +0.2
+            }
 	    }
 	}
 }
