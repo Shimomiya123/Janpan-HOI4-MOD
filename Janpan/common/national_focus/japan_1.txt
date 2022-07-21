@@ -5618,7 +5618,7 @@
 	
 	focus = {
 	    id = TEST_2
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_goal_generic_air_doctrine
 		mutually_exclusive = {
 		}
 		
@@ -5651,12 +5651,188 @@
 	    search_filters = { FOCUS_FILTER_POLITICAL }
 	    completion_reward = {
 		
-		    add_idea = test_idea_kill_fascism
+		    add_ideas = test_idea_kill_fascism
 			
 			add_popularity = {
                 ideology = neutrality
-                popularity = +0.2
+                popularity = +0.02
             }
 	    }
+	}
+	
+	focus = {
+	    id = janpan_civil_war
+		icon = GFX_focus_jap_cast_the_die
+		
+		cost = 10
+		
+		mutually_exclusive = {
+		
+		}
+		
+		x = 4
+		y = -3
+		
+		available = {
+		    fascism < 0.6
+			neutrality > 0.3
+		}
+		
+		bypass = {
+		    has_government = neutrality
+		}
+		
+		completion_reward = {
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = ROOT
+				size = 0.5	#This was too much for AI
+				capital = 531
+				states = { 531 529 530 528 }
+			}
+			if = {
+					limit = {
+						any_state = {
+							is_controlled_by = ROOT
+							is_core_of = KOR
+						}
+					}
+					release = KOR
+					set_autonomy = { target = KOR autonomy_state = autonomy_free }
+			}
+			if = {
+				limit = {
+					MEN = { is_subject_of = ROOT }
+				}
+				set_autonomy = { target = MEN autonomy_state = autonomy_free }
+			}
+			set_cosmetic_tag = JANPAN
+			
+			hidden_effect = {
+				division_template = { name = "Janpanese Revolutinary Division" division_names_group = JAP_INF_01 is_locked = yes regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } } }
+				535 = {
+					create_unit = { 
+						division = "name = \"1. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"2. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"3. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"4. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"5. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+				}
+				532 = {
+					create_unit = { 
+						division = "name = \"6. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"7. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"8. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"9. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"10. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+				}
+				282 = {
+					create_unit = { 
+						division = "name = \"11. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"12. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+				}
+				533 = {
+					create_unit = { 
+						division = "name = \"13. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"14. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+				}
+				536 = {
+					create_unit = { 
+						division = "name = \"15. Janpanese Revolutinary Division\" division_template = \"Janpanese Revolutinary Division\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = test_claim_germany
+		
+		icon = GFX_focus_attack_germany
+		
+		cost = 5
+		
+		relative_position_id = TEST_2
+	    x = 1
+		y = 2
+		
+		mutually_exclusive = {
+		}
+		
+		bypass = {
+		
+		}
+		
+	    completion_reward = {
+		
+		    create_wargoal = {
+			    type = take_state_focus
+			    target = GER
+			}
+		     
+			64 = {add_core_ of = JAP}
+			5 = {add_core_of = JAP}
+			54 = {add_core_of = JAP}
+			59 = {add_core_of = JAP}
+			55 = {add_core_of = JAP}
+			63 = {add_core_of = JAP}
+			763 = {add_core_ f = JAP}
+			61 = {add_core_of = JAP}
+			42 = {add_core_of = JAP}
+			53 = {add_core_of = JAP}
+			66 = {add_core_of = JAP}
+			52 = {add_core_of = JAP}
+			67 = {add_core_of = JAP}
+			68 = {add_core_of = JAP}
+			51 = {add_core_of = JAP}
+			65 = {add_core_of = JAP}
+			58 = {add_core_of = JAP}
+			60 = {add_core_of = JAP}
+			62 = {add_core_of = JAP}
+			56 = {add_core_of = JAP}
+			57 = {add_core_of = JAP}
+			50 = {add_core_of = JAP}
+			
+		}
+
 	}
 }

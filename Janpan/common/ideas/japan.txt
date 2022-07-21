@@ -18,6 +18,7 @@ ideas = {
 
 			modifier = {
 				fascism_drift = -0.03
+				neutrality_drift = 0.01
 			}
 	    }
 		
@@ -36,8 +37,11 @@ ideas = {
 			picture = ger_revive_the_kaiserreich
 			
 			modifier = {
-			    neutrality_drift = 0.01
-				drift_defence_factor = 0.03
+			    neutrality_drift = 0.05
+				fascism_drift = -0.01
+				stability_factor = -0.25
+				war_support_factor = -0.1
+				drift_defence_factor = -0.03
 				lend_lease_tension = -0.2
 				send_volunteers_tension = -0.01
 			}
