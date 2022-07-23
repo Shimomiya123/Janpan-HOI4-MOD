@@ -57,6 +57,33 @@ characters={
 			id=700
 		}
 	}
+	
+	JAP_fabian_writte = {
+	    name = JAP_fabian_writte
+		portraits = {
+		}
+		advisor = {
+		    slot = political_advisor
+			idea_token = JAP_mitsumasa_yonai
+			
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Waking the Tiger"
+					}
+					has_completed_focus = TEST_1
+				}
+			    allowed = {
+				    original_tag = JAP
+			    }
+			}
+			
+			traits = {
+				silent_workhorse 
+			}
+		    
+	    }
+	}
 
 	JAP_tomoyuki_yamashita={
 		name=JAP_tomoyuki_yamashita
