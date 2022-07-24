@@ -5007,6 +5007,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = GFX_portrait_JAP_fummmelfinger_konoe
+		texturefile = "gfx/leaders/JAP/r56_portrait_JAP_Fumimaro_Konoe.dds"
+	}
+	
+	spriteType = {
 		name = GFX_portrait_JAP_emperor_Jan
 		texturefile = "gfx/leaders/JAP/Portrait_Japan_Jan.dds"
 	}

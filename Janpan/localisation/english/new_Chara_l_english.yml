@@ -4,6 +4,8 @@
  JAP_EMPORER_JAN:0 "Kaiser Jan I"
  JAP_EMPORER_JAN_DESC:0 "As the first of the one and only true Japanese empire, Kaiser Jan I seeks to lead the people to absolute victory, and conquer their rightful land, aswell as fully establish the idea of the Janpanese people."
  JAP_fabian_writte:0 "Fabian Writte"
+ JAP_FUMIMARO_KONOE:0 "Prince Fumimaro Konoe"
+ JAP_FUMIMARO_KONOE_desc:0 "Prince Fumimaro Konoe (12 October 1891 – 16 December 1945) was a Japanese politician and prime minister. Known for the the Japanese invasion of China in 1937 and the breakdown in relations with the United States, which ultimately culminated in Japan's entry into World War II. He also played a central role in transforming his country into a totalitarian state by passing the National Mobilization Law and founding the Imperial Rule Assistance Association. "
  
  #Focus
  TEST_1:0 "Back To The Roots"
@@ -11,21 +13,45 @@
  test_claim_germany:0 "Reclaim Germany"
  janpan_civil_war:0 "Fight for the true Japan"
  zaibatsu_pressured:0 "Pressure the Zaibatsu"
+ zaibatsu_pressured_desc:0 "The Zaibatsu are one of the most if not the most powerful companies in Japan. We must use our growing political influence to put a squeeze on them in order to abuse them in the event of a civil war"
  zaibatsu_banned:0 "Ban the Zaibatsu"
- 
+ zaibatsu_banned_desc:0 "The Zaibatsu are too powerful! We must use our growing influence in politics to ban them and take their wealth for the purpose of funding our own plans"
+ allign_the_monarchy_janpan:0 "Allign the Imperial Family"
+ allign_the_monarchy_janpan_desc:0 "Hirohito is weak all we have to do is threaten the possibility of us staging a coup if he does not side with us, and he will gladly fall to his knees and beg us to let him help our cause. In doing so we rip the Tennō out of the militarist's hands and force them into becoming the aggresor in the case of a civil war."
+ funded_university_janpan:0 "Janpanese funded Universities"
+ funded_university_janpan_desc:0 "With the immense wealth of the Zaibatsu we are now able to fund public universities and indoctrinate our ideas into the people's minds"
  
  #Party and Country
  JANPAN_democratic:0 "Republic of Janpan"
- JANPAN_fascist:0 "Empire of Janpan"
+ JANPAN_fascism:0 "Empire of Janpan"
  JANPAN_neutrality:0 "Empire of Janpan"
- JANPAN_communist:0 "People's Republic of Janpan"
+ JANPAN_communism:0 "People's Republic of Janpan"
+ REPUBLICEZOREVIVE_neutrality:0 "Republic of Ezo"
+ REPUBLICEZOREVIVE_fascism:0 "Republic of Honshu"
+ REPUBLICEZOREVIVE_democratic:0 "Republic of Honshu"
+ REPUBLICEZOREVIVE_communism:0 "People's Republic of Honshu"
  
  #Ideas
  JAP_hirohito_janpan:0 "Emporer Shōwa"
+ JAP_hirohito_janpan_desc:0 "Although we despise the Imprial Family we will continue the abuse Hirohito's position to stabalize our movement for as long as we have to."
  test_idea_kill_fascism:0 "Fleeting Fascism"
  test_idea_kill_fascism_desc:0 "Added later"
  test_idea_imperial_revival:0 "A new Imperial Ambition"
  test_idea_imperial_revival_desc:0 "Added later"
  JAP_zaibatsu_pressured:0 "Zaibatsu Pressured"
  JAP_zaibatsu_banned:0 "Zaibatsu Banned"
+ 
+ #Traits
+ first_prime_minister_janpan:0 "Janpanese Prime Minister"
+ founder_of_taisei_yokusankai:0 "Founder of the Imperial Rule Assistance Association"
+ 
+ #Events
+ j_japan.1:0 "Hirohito sides with the Janpanese"
+ j_japan.1.t:0 "Hirohito sides with the Janpanese"
+ j_japan.1.d:0 "Today, in his first public speeche His Imperial Majesty the Emporer of Japan announced he will support the cause of the Janpanese as the military abused his position and relatively weak leadership, to seize almost complete control over Japanese politics."
+ j_japan.1.a:0 "Traitor! He will pay for this!"
+ j_japan.2:0 "Hirohito sides with the Janpanese"
+ j_japan.2.t:0 "Hirohito sides with us!"
+ j_japan.2.d:0 "Today, in his first public speeche Hirohito announced he will support our cause because the military abused his position and relatively weak leadership to seize almost complete control over Japanese politics."
+ j_japan.2.a:0 "What a grand fool! Long live the Kaiser!"
  

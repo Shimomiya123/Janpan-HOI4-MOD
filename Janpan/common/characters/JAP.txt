@@ -58,6 +58,22 @@ characters={
 		}
 	}
 	
+	JAP_fumimaro_konoe = {
+	    name = JAP_FUMIMARO_KONOE
+		portraits = {
+		    civilian = {
+			    large = GFX_portrait_JAP_fummmelfinger_konoe
+			}
+		}
+		country_leader = {
+		    ideology = fascism_ideology
+			desc = JAP_FUMIMARO_KONOE_desc
+			traits = { warrior_code founder_of_taisei_yokusankai imperial_sanction }
+			expire = "1945.12.6.1"
+			id = 700
+		}
+	}
+	
 	JAP_fabian_writte = {
 	    name = JAP_fabian_writte
 		portraits = {
@@ -79,7 +95,7 @@ characters={
 			}
 			
 			traits = {
-				silent_workhorse 
+				first_prime_minister_janpan 
 			}
 		    
 	    }
@@ -1560,6 +1576,9 @@ characters={
 			idea_token = JAP_mitsumasa_yonai
 			allowed = {
 				original_tag = JAP
+				NOT = {
+				    has_completed_focus = TEST_1
+				}
 			}
 			traits = {
 				silent_workhorse 
@@ -1620,6 +1639,10 @@ characters={
 			idea_token = takuo_godo
 			allowed = {
 				original_tag = JAP
+				
+				NOT = {
+				    has_completed_focus = TEST_1
+				}
 			}
 			traits = {
 				war_industrialist 

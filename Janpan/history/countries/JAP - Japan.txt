@@ -397,8 +397,8 @@ set_politics = {
 }
 set_popularities = {
 	fascism = 80
-	neutrality = 15
-	democratic = 5
+	neutrality = 2
+	democratic = 18
 	
 }
 
@@ -472,6 +472,8 @@ recruit_character = JAP_sanzo_nosaka
 recruit_character = JAP_hiroshi_oshima
 recruit_character = JAP_kijuro_shidehara
 recruit_character = JAP_fabian_writte
+recruit_character = JAP_fumimaro_konoe
+
 
 
 if = {

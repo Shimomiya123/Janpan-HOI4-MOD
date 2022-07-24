@@ -1,0 +1,29 @@
+add_namespace = j_japan
+
+country_event = {
+	id = j_japan.1
+	title = j_japan.1.t
+	desc = j_japan.1.d
+	picture = GFX_report_event_jap_imperial_family
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = j_japan.1.a
+        remove_ideas = JAP_hirohito_janpan	
+		set_cosmetic_tag = REPUBLICEZOREVIVE
+    }
+}
+
+country_event = {
+    id = j_japan.2
+	title = j_japan.2.t
+	desc = j_japan.2.d
+	picture = GFX_report_event_jap_imperial_family
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = j_japan.2.a
+	}
+}
