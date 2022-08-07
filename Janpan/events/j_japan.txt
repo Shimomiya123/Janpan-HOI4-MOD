@@ -27,3 +27,330 @@ country_event = {
 	    name = j_japan.2.a
 	}
 }
+
+news_event = {
+    id = j_japan.3
+	title = j_japan.3.t
+	desc = j_japan.3.d
+	picture = GFX_janpan_tokyo
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = j_japan.3.a
+		add_popularity = {
+		    ideology = neutrality
+			popularity = +0.10
+		}
+	}
+}
+
+news_event = {
+    id = j_japan.4
+	title = j_japan.4.t
+	desc = j_japan.4.d
+	picture = GFX_janpan_osaka
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = j_japan.4.a
+		add_popularity = {
+		    ideology = neutrality
+			popularity = +0.05
+		}
+	}
+}
+
+news_event = {
+    id = j_japan.5
+	title = j_japan.5.t
+	desc = j_japan.5.d
+	picture = GFX_janpan_kanazawa
+	is_triggered_only = yes
+	
+	option = {
+	    name = j_japan.5.a
+		add_popularity = {
+		    ideology = neutrality
+			popularity = +0.05
+		}
+	}
+}
+	
+news_event = {
+    id = j_japan.6
+	title = j_japan.6.t
+	desc = j_japan.6.d
+	picture = GFX_report_event_jap_imperial_family
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = j_japan.6.a
+		add_popularity = {
+		    ideology = neutrality
+			popularity = +0.05
+		}
+	}
+}
+
+news_event = {
+    id = j_japan.7
+	title = j_japan.7.t
+	desc = j_japan.7.d
+	picture = GFX_report_event_jap_imperial_family
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = j_japan.7.a
+		add_popularity = {
+		    ideology = neutrality
+			popularity = +0.05
+		}
+	}
+}
+
+country_event = {
+	id = j_japan.8
+	title = j_japan.8.t
+	desc = j_japan.8.desc
+	picture = GFX_report_event_japanese_parade
+
+	is_triggered_only = yes
+	
+	option = {
+		name = j_japan.8.a
+		set_politics = { ruling_party = fascism elections_allowed = no }
+		add_popularity = { ideology = fascism popularity = 0.9 }
+		if = {
+			limit = {
+				JAP_emperor_jan = {
+					is_country_leader = yes
+				}
+			}
+			remove_country_leader_role = {
+				character = JAP_emperor_jan
+				ideology = neutrality
+			}
+		}
+		add_country_leader_role = {
+			character = JAP_emperor_jan
+			country_leader = {
+				expire = "1989.1.1"
+				ideology = internationlist_janpanism
+				id = 700 
+				traits = { warrior_code dictator popular_figurehead anti_communist_crusader imperial_sanction }
+			}
+			promote_leader = yes
+		}
+		
+		set_politics = {
+	        ruling_party = fascism
+            elections_allowed = no
+            last_election = "1935.12.17"
+            long_name = TAG_janpan_long
+            name = TAG_janpan
+        }
+
+	}
+}
+
+news_event = {
+	id = j_japan.9
+	title = j_japan.9.t
+	desc = j_japan.9.d
+	picture = GFX_report_event_japanese_parade
+
+	is_triggered_only = yes
+	
+	option = {
+		name = j_japan.9.a #Side with Jan I
+		set_politics = { ruling_party = neutrality elections_allowed = no }
+		add_popularity = { ideology = neutrality popularity = 0.9 }
+		add_timed_idea = { idea = JAP_military_purges days = 90 }
+		if = {
+			limit = {
+				JAP_emperor_jan = {
+					is_country_leader = yes
+				}
+			}
+			
+			add_country_leader_role = {
+			    character = JAP_emperor_jan
+			    country_leader = {
+				    expire = "1989.1.1"
+				    ideology = shintoist_janpanism
+				    id = 700 
+				    traits = { warrior_code dictator popular_figurehead anti_communist_crusader imperial_sanction }
+			    }
+		    }
+			promote_leader = yes
+			set_country_leader_name = {
+			    name = TAG_shinchi_jan
+			}
+			
+			swap_ideas = {
+			    remove_idea = JAP_hirohito_janpan
+				add_idea = JAP_michinomiya
+			}
+		}
+		
+		set_politics = {
+	        ruling_party = neutrality
+            elections_allowed = no
+            last_election = "1935.12.17"
+            long_name = TAG_janpan_shinto_long
+            name = TAG_janpan_shinto
+        }
+
+	}
+	
+	option = {
+		name = j_japan.9.b #Return throne to Hirohito
+		set_politics = { ruling_party = neutrality elections_allowed = no }
+		add_popularity = { ideology = neutrality popularity = 0.9 }
+		add_timed_idea = { idea = JAP_military_purges days = 90 }
+		if = {
+			limit = {
+				JAP_emperor_jan = {
+					is_country_leader = yes
+				}
+			}
+			
+			add_country_leader_role = {
+			    character = JAP_emperor_hirohito
+			    country_leader = {
+				    expire = "1989.1.1"
+				    ideology = shintoist_janpanism
+				    id = 700 
+				    traits = {
+					    warrior_code
+					    emperor_showa
+				    }
+		        }
+			}
+			
+			set_politics = {
+	        ruling_party = neutrality
+            elections_allowed = no
+            last_election = "1935.12.17"
+            long_name = TAG_janpan_shinto_long
+            name = TAG_janpan_shinto
+            }
+			
+			swap_ideas = {
+			    remove_idea = JAP_hirohito_janpan
+				add_idea = prince_shinchi
+			}
+			
+			retire_country_leader = yes
+			
+		}
+	}
+
+}
+
+country_event = {
+    id = j_japan.10
+	title = j_japan.10.t
+	desc = j_japan.10.d
+	picture = GFX_report_event_japanese_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+	}
+}
+
+country_event = {
+    id = j_japan.11
+	title = j_japan.11.t
+	desc = j_japan.11.d
+	picture = GFX_report_event_japanese_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = j_japan.11.a
+		
+		ai_will_do = {
+		 
+		 factor = 1
+		}
+		
+        ROOT = {
+            5 = {
+                transfer_state_to = JAP
+            }
+        }
+		JAP = {
+		    give_guarantee = GER
+		}
+	}
+	
+	option = {
+	    name = j_japan.11.b
+		
+		ai_will_do = {
+		    factor = 2
+		}
+		
+		JAP = {
+			
+			country_event = { id = j_japan.12 days = 1}
+		}
+	}
+	
+	
+}
+
+country_event = {
+    id = j_japan.12
+	title = j_japan.12.t
+	desc = j_japan.12.d
+	picture = GFX_report_event_japanese_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = j_japan.12.a
+		
+		create_wargoal = {
+		    type = annex_everything
+		    target = GER
+		}
+	}
+	
+	
+}
+
+country_event = {
+    id = j_japan.13
+	title = j_japan.13.t
+	desc = j_japan.13.d
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = j_japan.13.a
+		
+		add_political_power = 100
+		add_stability = -0.15
+		remove_ideas = JAP_hirohito_janpan
+	}
+	
+	option = {
+	    name = j_japan.13.b
+		
+		MAN = {
+		    add_ideas = MAN_exiled_imperial_family
+		}
+		
+		remove_ideas = JAP_hirohito_janpan
+	}
+}
+
+
+

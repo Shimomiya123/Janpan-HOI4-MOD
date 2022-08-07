@@ -1,13 +1,14 @@
 characters={
 	JAP_emperor_hirohito={
-		name=JAP_emperor_hirohito
+		name=JAP_emperor_hirohito_1
 		portraits={
 			civilian={
 				large=GFX_portrait_JAP_emperor_hirohito
 			}
 		}
 		country_leader={
-			ideology=fascism_ideology
+			ideology= showa_statetism
+			desc = JAP_emperor_hirohito_1_desc
 			traits={ warrior_code emperor_showa imperial_sanction }
 			expire="1989.1.1.1"
 			id=700
@@ -50,7 +51,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=despotism
+			ideology= despotism
 			traits={ warrior_code dictator popular_figurehead anti_communist_crusader imperial_sanction }
 			desc = JAP_EMPORER_JAN_DESC
 			expire="1989.1.1.1"
@@ -66,7 +67,7 @@ characters={
 			}
 		}
 		country_leader = {
-		    ideology = fascism_ideology
+		    ideology = showa_statetism
 			desc = JAP_FUMIMARO_KONOE_desc
 			traits = { warrior_code founder_of_taisei_yokusankai imperial_sanction }
 			expire = "1945.12.6.1"
@@ -80,7 +81,6 @@ characters={
 		}
 		advisor = {
 		    slot = political_advisor
-			idea_token = JAP_mitsumasa_yonai
 			
 			available = {
 				if = {
@@ -89,16 +89,48 @@ characters={
 					}
 					has_completed_focus = TEST_1
 				}
-			    allowed = {
-				    original_tag = JAP
-			    }
 			}
 			
+			allowed = {
+				    original_tag = JAP
+			}
 			traits = {
 				first_prime_minister_janpan 
 			}
 		    
 	    }
+		
+		country_leader = {
+		    ideology = janpanese_democracy
+			desc = JAP_fabian_writte_desc
+			traits = { janpanist_loyalist anti_extremist constitutional_monarchist }
+			expire = "1945.12.6.1"
+			id = 700
+		}
+	}
+	
+	JAP_maxim = {
+	    name = JAP_maxim
+		portraits = {}
+		
+		advisor = {
+		slot = political_advisor
+		    available = {
+			    if = {
+				    limit = {
+					    has_dlc = "Waking the Tiger"
+					}
+					has_completed_focus = TEST_1
+			    }
+		    }
+		    allowed = {
+			    original_tag = JAP
+		    }
+			traits = {
+			    the_first_advisor
+		    }
+		}
+
 	}
 
 	JAP_tomoyuki_yamashita={

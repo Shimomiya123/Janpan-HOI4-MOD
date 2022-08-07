@@ -5598,7 +5598,7 @@
 		}
 		
 		relative_position_id = JAP_the_unthinkable_option
-		x = -7
+		x = -10
 	    y = 0
 		
 	    cost = 20
@@ -5702,6 +5702,7 @@
 		completion_reward = {
 		    add_ideas = JAP_hirohito_janpan
 			retire_country_leader = yes
+			unlock_decision_category_tooltip = allign_the_imperial_family_dec
 		}
 		
 		
@@ -5990,28 +5991,171 @@
 		}
 	}
 	
-	#focus = { #work on this
-	    id = first_steps_to_glory
+	focus = {
+	    id = our_future
+	    cost = 10
 		
+		relative_position_id = janpan_civil_war 
+		x = 0
+		y = 1
+		
+		available = {
+		    has_civil_war = no
+		}
+		
+		prerequisite = { focus = janpan_civil_war }
+	
+		
+		completion_reward = {
+
+		}
 	}
 	
+	focus = {
+	    id = merge_with_imperial_family
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		
+		cost = 10
+		
+		relative_position_id = our_future
+		x = 0
+		y = 1
+		
+		mutually_exclusive = {
+		    focus = great_democracy
+			focus = our_dream
+		}
+		
+		prerequisite =  { focus = our_future } 
+		
+		completion_reward = {
+		    add_political_power = 100
+			news_event = {id = j_japan.9 hours = 1}
+		}
+	}
 	
-	#focus = {           #will be used later
+	focus = {
+	    id = great_democracy
+		icon = GFX_goal_support_democracy
+		
+		cost = 10
+		
+		relative_position_id = our_future
+		x = -2
+		y = 1
+		
+		mutually_exclusive = {
+		    focus = our_dream
+			focus = merge_with_imperial_family
+		}
+		
+		prerequisite =  { focus = our_future } 
+		
+		available = {
+		    JAP_fabian_writte = {
+			    is_character_slot = political_advisor
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+	    id = our_dream
+		icon = GFX_goal_support_fascism
+		
+		cost = 10
+		
+		relative_position_id = our_future
+		x = 4
+		y = 1
+		mutually_exclusive = {
+		    focus = great_democracy
+			focus = merge_with_imperial_family
+		}
+		
+		prerequisite =  { focus = our_future } 
+		
+		completion_reward = {
+		    country_event = { 
+			    id= j_japan.8
+			    hours = 2
+		    }
+		}
+	}
+	
+	focus = {
+	    id = hirohito_fate
+		icon = GFX_fate_hirohito
+		
+		cost = 10
+		
+		relative_position_id = our_dream
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = our_dream }
+		
+		mutually_exclusive = {
+		}
+		
+		available = {
+		    fascism > 0.99
+		}
+		
+		completion_reward = {
+		    country_event = { id = j_japan.13 hours = 1 }
+		}
+	}
+	
+	focus = {
+	    id = offer_support_to_germany
+		icon = GFX_german_assistance_janpan
+		
+		cost = 5
+		
+		relative_position_id = our_dream
+		x = -2
+		y = 1
+		
+		prerequisite = { 
+		    focus = our_dream
+		    focus = merge_with_imperial_family
+		}
+		
+		available = {
+		    GER = {
+			    has_governement = fascism
+			}
+		}
+		
+		completion_reward = {
+		    GER = {
+			    country_event = { id = j_japan.11 hours = 2 }
+			}
+		}
+	}
+	
+	focus = {           
 	    id = test_claim_germany
 		
 		icon = GFX_focus_attack_germany
 		
 		cost = 5
 		
-		relative_position_id = TEST_2
-	    x = 1
+		relative_position_id = our_dream
+	    x = -2
 		y = 2
 		
+		prerequisite = { focus = offer_support_to_germany }
+
+
 		mutually_exclusive = {
 		}
 		
 		bypass = {
-		
+		    
 		}
 		
 	    completion_reward = {

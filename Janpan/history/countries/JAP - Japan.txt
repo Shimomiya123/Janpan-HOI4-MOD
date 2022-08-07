@@ -473,6 +473,7 @@ recruit_character = JAP_hiroshi_oshima
 recruit_character = JAP_kijuro_shidehara
 recruit_character = JAP_fabian_writte
 recruit_character = JAP_fumimaro_konoe
+recruit_character = JAP_maxim
 
 
 

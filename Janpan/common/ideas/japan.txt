@@ -46,6 +46,25 @@ ideas = {
 				send_volunteers_tension = -0.01
 			}
 		}
+		
+		prince_shinchi = {
+		
+		    allowed = {
+			    always = no
+			}
+			
+			allowed_civil_war = {
+			    always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = jap_shinchi
+			
+			modifier = {
+			    stability_factor = 0.4
+			}
+		}
 	
 	
 		state_shintoism = {
@@ -512,6 +531,24 @@ ideas = {
 			}
 		}
 		
+		JAP_michinomiya = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+
+			picture = jap_hirohito
+			
+			modifier = {
+				stability_factor = 0.5
+			}
+		}
+		
 		JAP_hirohito_janpan = {
 			allowed = {
                 always = yes			
@@ -529,6 +566,7 @@ ideas = {
 				stability_factor = 0.3
 			}
 		}
+		
 
 		JAP_the_unthinkable_option = {
 			allowed = {

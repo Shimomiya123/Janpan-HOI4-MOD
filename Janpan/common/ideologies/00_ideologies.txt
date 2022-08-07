@@ -12,6 +12,9 @@ ideologies = {
 		
 			socialism = {
 			}
+			
+			janpanese_democracy = {
+			}
 		}
 		
 		dynamic_faction_names = {
@@ -137,6 +140,12 @@ ideologies = {
 			
 			rexism = {
 			}
+			
+			internationlist_janpanism = {
+			}
+			
+			showa_statetism = {
+			}
 		}
 		
 		dynamic_faction_names = {
@@ -190,6 +199,9 @@ ideologies = {
 			}
 			
 			centrism = {
+			}
+			
+			shintoist_janpanism = {
 			}
 		}
 

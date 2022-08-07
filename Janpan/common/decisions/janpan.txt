@@ -1,0 +1,164 @@
+
+allign_the_imperial_family_dec = {
+
+	march_dec = {
+
+		icon = GFX_goal_demand_sudetenland 	#The left side icon to show for this decision.
+		# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
+		
+		available = {
+		    has_civil_war = no
+            original_tag = JAP	
+			neutrality > 0.5
+		}
+		
+		fire_only_once = yes		#If set to yes, the decision will only appear once, after execution will not appear again.
+		#days_re_enable = 5	#The amount of days of days it will take for the decision to reappear. Not valid if fire_only_once is set to yes
+
+		visible = {		#Conditions to make this decision visible, can be left blank to make it always appear.
+			has_completed_focus = allign_the_monarchy_janpan
+	    	NOT = {
+			    has_completed_focus = our_future
+			}
+		}		
+
+		cost = 200		#The cost to execute the decision, by default its political power.
+
+		# EFFECTS OF THIS DECISION/MISSION
+ 
+		complete_effect = {	
+            news_event = { id = j_japan.3 hours = 4 }	#The effects to execute once the decision icon is clicked.
+		}
+		
+		# AI LOGIC FOR THIS DECISION/MISSION
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	
+	}
+	
+	march2_dec = {
+
+		icon = GFX_goal_demand_sudetenland
+		
+		available = {
+            original_tag = JAP		
+			has_civil_war = no
+		}
+		
+		fire_only_once = yes		
+		#days_re_enable = 5	
+
+		visible = {		
+			has_completed_focus = allign_the_monarchy_janpan
+			NOT = {
+			    has_completed_focus = our_future
+			}
+		}		
+
+		cost = 100
+ 
+		complete_effect = {	
+            news_event = { id = j_japan.4 hours = 4 }
+		}
+
+		ai_will_do = {	
+			factor = 0
+		}
+	
+	}
+	
+	march3_dec = {
+
+		icon = GFX_goal_demand_sudetenland 	
+		
+		available = {
+            original_tag = JAP	
+            has_civil_war = no			
+		}
+		
+		fire_only_once = yes		
+		#days_re_enable = 5	
+
+		visible = {		
+			has_completed_focus = allign_the_monarchy_janpan
+			NOT = {
+			    has_completed_focus = our_future
+			}
+		}		
+
+		cost = 100		
+ 
+		complete_effect = {	
+            news_event = { id = j_japan.5 hours = 4 }	
+		}
+		
+		ai_will_do = {	
+			factor = 0
+		}
+	
+	}
+	
+	march4_dec = {
+
+		icon = GFX_goal_demand_sudetenland 	
+		
+		available = {
+            original_tag = JAP
+            has_civil_war = no				
+		}
+		
+		fire_only_once = yes	
+
+		visible = {		
+			has_completed_focus = allign_the_monarchy_janpan
+			NOT = {
+			    has_completed_focus = our_future
+			}
+		}		
+
+		cost = 100	
+ 
+		complete_effect = {	
+            news_event = { id = j_japan.6 hours = 4 }	
+		}
+		
+		ai_will_do = {	
+			factor = 0
+		}
+	
+	}
+	
+	march5_dec = {
+
+		icon = GFX_goal_demand_sudetenland 	
+		
+		available = {
+            original_tag = JAP	
+            has_civil_war = no				
+		}
+		
+		fire_only_once = yes
+
+		visible = {	
+			has_completed_focus = allign_the_monarchy_janpan
+			NOT = {
+			    has_completed_focus = our_future
+			}
+		}		
+
+		cost = 100	
+ 
+		complete_effect = {	
+            news_event = { id = j_japan.7 hours = 4 }		
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	
+	}
+	
+
+}
