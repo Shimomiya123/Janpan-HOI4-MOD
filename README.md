@@ -1,2 +1,2 @@
-# Janpan-HOI4-MOD
-This is a hoi4 mod meant to revive the Empire of Janpan
+# Empire of Janpan
+The Empire of Janpan is a HOI4 mod in which you can revive an empire lost to time by using an alternative focus tree.
